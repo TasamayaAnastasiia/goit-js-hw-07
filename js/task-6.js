@@ -19,7 +19,8 @@ createButton.addEventListener("click", function createBoxes(amount) {
 for( let j = 0; j < amount; j++) {
 
         let divNew = document.createElement("div");                    /* creating an element*/ 
-        boxStart.append(divNew);                                       /* adding this element in DOM*/
+        boxStart.append(divNew);    
+        divNew.classList.add('.box');                                   /* adding this element in DOM*/
         divNew.style.backgroundColor = getRandomHexColor();
         input.value = "";                                             /* removing input number*/
 
