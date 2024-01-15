@@ -20,7 +20,7 @@ for( let j = 0; j < amount; j++) {
 
         let divNew = document.createElement("div");                    /* creating an element*/ 
         boxStart.append(divNew);    
-        divNew.classList.add('.box');                                   /* adding this element in DOM*/
+        divNew.classList.add('box');                                   /* adding this element in DOM*/
         divNew.style.backgroundColor = getRandomHexColor();
         input.value = "";                                             /* removing input number*/
 
