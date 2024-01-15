@@ -172,6 +172,7 @@ button[type='submit']:hover {
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
   text-align: center;
+  margin: 0;
 }
 .widget {
   display: flex;
