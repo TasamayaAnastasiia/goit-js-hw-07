@@ -1,7 +1,7 @@
-let input = document.querySelector("#controls input");
-let createButton = document.querySelector("button[data-create]");
-let destroyButton = document.querySelector("button[data-destroy]");
-let boxStart = document.querySelector("#boxes");
+const input = document.querySelector("#controls input");
+const createButton = document.querySelector("button[data-create]");
+const destroyButton = document.querySelector("button[data-destroy]");
+const boxStart = document.querySelector("#boxes");
 
 function getRandomHexColor() {               /*random color*/
     return `#${Math.floor(Math.random() * 16777215) 
@@ -11,7 +11,7 @@ function getRandomHexColor() {               /*random color*/
 
 createButton.addEventListener("click", function createBoxes(amount) {
 
-   amount = input.value;                    /* saving amount new boxes*/
+   amount = Number(input.value);                    /* saving amount new boxes*/
    boxStart.innerHTML = '';                 /* removing every new creting box, if it is a new click*/
 
    if ( amount >= 1 && amount <= 100) {     /* checking a number in field*/

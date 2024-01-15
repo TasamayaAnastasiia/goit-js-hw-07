@@ -27,5 +27,12 @@ const images = [
     alt: 'Zebras on Zebra',
     },
     ];
-    let listImages = document.querySelector(".gallery");
-    listImages.insertAdjacentHTML('afterbegin', "<li class='foto-animal'><img src='https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', alt='White and Black Long Fur Cat'/></li> <li class='foto-animal'><img src='https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', alt='Orange and White Koi Fish Near Yellow Koi Fish'/></li> <li class='foto-animal'><img src='https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', alt='Group of Horses Running'/></li> <li class='foto-animal'><img src='https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt='Elephant Beside on Baby Elephant'/></li> <li class='foto-animal'><img src='https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt='Blue Geeen and Orange Parrot'/></li> <li class='foto-animal'><img src='https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt='Zebras on Zebra'/></li>");
+    const listImages = document.querySelector(".gallery");
+
+            const arrayUrl = images.forEach((image) => {                                                   /*Method forEach for object's url*/
+
+                const optionList = document.createElement("li");                                            /* creating li in a list*/
+                optionList.classList.add("foto-animal");                                                    /* adding name class for css*/
+                optionList.insertAdjacentHTML('beforeend', `<img src="${image.url}" alt="${image.alt}">`);  /*creating img before every li*/
+                listImages.append(optionList);                                                              /*adding all in DOM*/
+    });
