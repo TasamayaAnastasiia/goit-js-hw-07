@@ -27,12 +27,12 @@ const images = [
     alt: 'Zebras on Zebra',
     },
     ];
-    const listImages = document.querySelector(".gallery");
 
-            const arrayUrl = images.forEach((image) => {                                                   /*Method forEach for object's url*/
+const listImages = document.querySelector(".gallery");
+let galleryHTML = '';
 
-                const optionList = document.createElement("li");                                            /* creating li in a list*/
-                optionList.classList.add("foto-animal");                                                    /* adding name class for css*/
-                optionList.insertAdjacentHTML('beforeend', `<img src="${image.url}" alt="${image.alt}">`);  /*creating img before every li*/
-                listImages.append(optionList);                                                              /*adding all in DOM*/
-    });
+images.forEach((image) => {
+  galleryHTML += `<li class="foto-animal"><img src="${image.url}" alt="${image.alt}"></li>`;
+});
+
+listImages.insertAdjacentHTML('beforeend', galleryHTML);
